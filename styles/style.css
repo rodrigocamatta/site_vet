@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+/* fontes */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300&display=swap');
+
+:root {
+    /* cores */
+    --cor1: #85EAD1;
+    --cor2: #30B392;
+    --cor3: #1A9979;  
+    --cor4: #1C6653;
+    --cor_fundo: #c2faec;
+
+    /* fontes */
+    --fonte_padrao: 'Radio Canada', serif;
+    --fonte_nome: 'Dancing Script', cursive;
+    --fonte_titulos: 'Shadows Into Light', cursive;
+}
+
+/* seletor global */
+* {
+    margin: 0px; /* "cola" os elementos na margem do navegador */
+    padding: 0px;
+} 
+
+body {
+    background-color: var(--cor_fundo);
+    font-family: var(--fonte_padrao);
+    font-size: 1em;
+}
+
+header {
+   background-image: linear-gradient(to bottom, var(--cor2), var(--cor4));
+   min-height: 150px;
+   padding-top: 20px;
+}
+
+header h1 {
+    font-family: var(--fonte_nome);
+    font-size: 3.5em;
+    color: white;
+    margin-bottom: 10px; /* distancia entre h1 e h2 do header */
+    padding-left: 20px; /* distância da foto */
+}
+
+header h2 {
+    font-family: var(--fonte_padrao);
+    font-size: 1.5em;
+    color: white;
+    padding-left: 20px; /* distância da foto */
+}
+
+header img {
+    margin-bottom: 15px; /* distância foto e nav */
+    margin-left: 20px;
+    border: 3px solid white; /* distância foto e lateral do navegador */
+}
+
+nav {
+    background-color: var(--cor4);
+    padding: 10px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.432);
+}
+
+nav a {
+    padding: 10px;
+    color: white;
+    font-weight: bold; 
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+nav a:hover {
+    background-color: var(--cor2);
+    color: var(--cor4);
+    transition-duration: 0.5s;
+}
+
+main {
+    background-color: white;
+    min-width: 300px;
+    max-width: 850px;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 30px; /* para o main não encostar no footer */
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.301);
+    border-radius: 0px 0px 8px 8px;
+}
+
+main p {
+    font-family: var(--fonte_padrao);
+    font-size: 1em;
+    text-align: justify;
+    text-indent: 30px;
+    margin: 10px 0px 10px 0px; /* espaço entre parágrafos */
+    line-height: 1.5em; /* espaço entre as linhas */
+}
+
+main p.sem_indent {
+    text-indent: 0px;
+}
+
+main h1 {
+    font-family: var(--fonte_titulos);
+    font-size: 2.5em;
+    color: var(--cor4);
+    font-weight: bolder;
+}
+
+main h2 {
+    font-family: var(--fonte_padrao);
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--cor4);
+    background-image: linear-gradient(to right, var(--cor_fundo), transparent);
+    padding: 5px 0px 5px 20px;
+    margin: 15px 0px 5px -20px;
+}
+
+main ul {
+    line-height: 1.7em;   /* espaço entre as linhas */
+    list-style-position: inside;   /* para os marcadores ficarem para dentro */   
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor4); 
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+main a::after {
+    content: '\1F310';/* seta link */
+}
+
+main a.voltar::after { /* seta voltar depois do link */
+    content: '\21A9';
+}
+
+main p.voltar {
+    text-align: right;
+    text-indent: 0px;
+}
+
+img.logotipo{
+    max-width: 25px;
+    min-width: 25px;
+    margin: auto;
+}
+
+div.video {
+    padding: 20px;
+    margin: 0px -20px 30px -20px;
+    padding-bottom: 58%;
+    position: relative;
+}
+
+div.video iframe {
+    position: absolute;
+    top: 5%; /* distância entre frame do vídeo e borda superior da div*/
+    left: 5%; /* distância entre frame do vídeo e borda esquerda da div*/
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    max-width: 400px;
+    margin: auto;
+    background-color: var(--cor_fundo);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.452);
+}
+
+aside h3 {
+    background-color: var(--cor3);
+    color: white;
+    margin: -10px -10px 5px -10px;
+    padding: 5px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.705);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
